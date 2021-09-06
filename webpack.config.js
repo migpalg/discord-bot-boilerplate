@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
@@ -14,6 +15,11 @@ module.exports = {
     path: path.join(__dirname, 'build'),
     publicPath: '/',
     filename: '[name].js',
+  },
+  resolve: {
+    alias: {
+      '@app': path.resolve(__dirname, 'src'),
+    },
   },
   target: 'node',
   externals: [nodeExternals()],
