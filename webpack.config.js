@@ -22,6 +22,7 @@ module.exports = {
     },
   },
   target: 'node',
+  devtool: config.mode === 'development' ? 'eval-source-map' : false,
   externals: [nodeExternals()],
   module: {
     rules: [
