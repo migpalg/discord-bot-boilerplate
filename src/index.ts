@@ -1,22 +1,11 @@
-function getUser(): Promise<Record<string, any>> {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-        name: 'Hello',
-        age: 21,
-      });
-    }, 200);
-  });
-}
+import { Client, Intents } from 'discord.js';
 
 async function main(): Promise<void> {
-  const user = {
-    name: 'Miguel!',
-  };
+  const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
-  const result = await getUser();
-
-  console.log({ ...user, ...result });
+  client.once('ready', () => {
+    console.log('Ready!');
+  });
 }
 
 main();
