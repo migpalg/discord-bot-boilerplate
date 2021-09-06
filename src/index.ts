@@ -9,7 +9,7 @@ function getUser(): Promise<Record<string, any>> {
   });
 }
 
-async function main() {
+async function main(): Promise<void> {
   const user = {
     name: 'Miguel!',
   };
