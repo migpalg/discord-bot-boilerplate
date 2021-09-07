@@ -1,5 +1,7 @@
 # NiuBot
 
+[![Build Status](https://app.travis-ci.com/migpalg/discord-bot-boilerplate.svg?branch=main)](https://app.travis-ci.com/migpalg/discord-bot-boilerplate)
+
 Bot for managing Discord Channels
 
 ## 🚀 Getting Started
