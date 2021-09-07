@@ -1,5 +1,7 @@
 // @packages
 import { Client, Intents } from 'discord.js';
+
+// @scripts
 import { config } from './config';
 
 /**
