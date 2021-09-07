@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - 16
+
+script:
+  - echo "linting code..."
+  - yarn lint
+  - echo "running tests..."
+  - yarn test
