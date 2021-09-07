@@ -1,3 +1,4 @@
+// @scripts
 import { discordConfig } from './discord';
 import { serverConfig } from './server';
 
