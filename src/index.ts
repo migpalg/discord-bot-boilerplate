@@ -1,20 +1,14 @@
-import { createServer } from 'http';
+// @packages
+import { Client, Intents } from 'discord.js';
 import { config } from './config';
 
+/**
+ * Entry point of the application
+ */
 async function main(): Promise<void> {
-  const server = createServer(async (_, res) => {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
+  const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
-    res.write(
-      JSON.stringify({
-        message: 'hello world!',
-      }),
-    );
-
-    res.end();
-  });
-
-  server.listen(config.server.port);
+  client.login(config.discord.token);
 }
 
 main();
