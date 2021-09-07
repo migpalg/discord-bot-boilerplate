@@ -1,9 +1,16 @@
 language: node_js
 node_js:
   - 16
-
-script:
-  - echo "linting code..."
-  - yarn lint
-  - echo "running tests..."
-  - yarn test
+jobs:
+  include:
+    - stage: Build
+      name: Webpack compile
+      env:
+        - NODE_ENV=production
+      script: yarn run build
+    - stage: Lint
+      name: ESLint run
+      script: yarn lint
+    - stage: Tests
+      name: Unit tests
+      script: yarn test
