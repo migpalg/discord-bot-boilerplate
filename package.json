@@ -1,8 +1,11 @@
 {
-  "name": "playbot",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Miguel Palacio",
+  "name": "@migpalg/bot-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Miguel Palacio <migpalg@gmail.com>",
+  "repository": {
+    "url": "https://github.com/migpalg/discord-bot-boilerplate"
+  },
   "license": "MIT",
   "scripts": {
     "test": "jest",
