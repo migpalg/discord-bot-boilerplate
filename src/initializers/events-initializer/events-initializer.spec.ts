@@ -1,9 +1,21 @@
 import { initEventHandlers } from './events-initializer';
 
 describe('initEventHanlders unit testing', () => {
-  it('should read system files', () => {
-    initEventHandlers({} as any);
+  let mockClient: Record<string, jest.Mock>;
+  let mockFunction: jest.Mock;
 
-    expect(true).toBeTruthy();
+  beforeAll(() => {
+    mockFunction = jest.fn();
+
+    mockClient = {
+      on: mockFunction,
+      once: mockFunction,
+    };
+  });
+
+  it('should read system files', async () => {
+    await initEventHandlers(mockClient as any);
+
+    expect(mockFunction).toHaveBeenCalled();
   });
 });
