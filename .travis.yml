@@ -5,7 +5,7 @@ jobs:
   include:
     - stage: Build
       name: Webpack compile
-      script: yarn run build
+      script: NODE_ENV=production yarn run build
     - stage: Lint
       name: ESLint run
       script: yarn lint
