@@ -20,6 +20,7 @@
   "rules": {
     "import/prefer-default-export": "off",
     "prettier/prettier": "error",
+    "no-underscore-dangle": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -31,5 +32,13 @@
       }
     ]
   },
-  "ignorePatterns": ["node_modules", "build"]
+  "ignorePatterns": ["node_modules", "build"],
+  "overrides": [
+    {
+      "files": ["*.spec.ts", "*.test.ts"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ]
 }
