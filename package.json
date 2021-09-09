@@ -1,6 +1,6 @@
 {
   "name": "@migpalg/bot-boilerplate",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "private": true,
   "author": "Miguel Palacio <migpalg@gmail.com>",
   "repository": {
@@ -14,6 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@discordjs/builders": "^0.6.0",
     "discord.js": "^13.1.0",
     "winston": "^3.3.3"
   },
@@ -32,12 +33,12 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.0",
     "jest": "^27.1.0",
     "prettier": "^2.3.2",
     "typescript": "^4.4.2",
     "webpack": "^5.52.0",
     "webpack-cli": "^4.8.0",
-    "webpack-node-externals": "^3.0.0",
-    "husky": "^7.0.0"
+    "webpack-node-externals": "^3.0.0"
   }
 }
