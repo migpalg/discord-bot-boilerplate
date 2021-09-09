@@ -1,8 +1,8 @@
-# NiuBot
+# 🤖 Discord Bot Bolerplate
 
-[![Build Status](https://app.travis-ci.com/migpalg/discord-bot-boilerplate.svg?branch=main)](https://app.travis-ci.com/migpalg/discord-bot-boilerplate)
+[![Travis](https://app.travis-ci.com/migpalg/discord-bot-boilerplate.svg?branch=main)](https://app.travis-ci.com/migpalg/discord-bot-boilerplate)
 
-Bot for managing Discord Channels
+This is a base project to build your discord bots!
 
 ## 🚀 Getting Started
 
@@ -42,4 +42,26 @@ And then you can create containers with the created image:
 
 ```bash
 docker container run -d -p 8081:8081 --name niubot-instance niubot-service:latest
+```
+
+### 💡 Using `docker-compose`
+
+You can use `docker-compose` to deploy both development and production stacks.
+
+#### Development builds
+
+To develop with this tool, run the following command:
+
+```bash
+docker-compose -f docker-compose.dev.yml run --build
+```
+
+This command will create a development environment with docker compose that have hot reload
+
+#### Production build
+
+To build and host a production build of the application run the following command:
+
+```bash
+docker-compose up -d --build
 ```
